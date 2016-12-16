@@ -134,8 +134,8 @@ let interestingNumbers = [
     "Square": [1, 4, 9, 16, 25],
 ]
 var largest = 0
-//var largestKind: String? = nil
-var largestKind = ""
+var largestKind: String? = nil
+// var largestKind = ""
 for (kind, numbers) in interestingNumbers {
     for number in numbers {
         if number > largest {
@@ -144,10 +144,11 @@ for (kind, numbers) in interestingNumbers {
         }
     }
 }
-//print(largestKind ?? "")
-print(largestKind)
+print(largestKind ?? "")
+// print(largestKind)
 print(largest)
-
+*/
+/*
 var n = 2
 while n < 100 {
     n = n * 2
@@ -173,7 +174,7 @@ for j in 1...4 {
 
 print(total)
 print(total2)
- */
+*/
 
 /*
 // 使用func来声明一个函数，使用名字和参数来调用函数。使用->来指定函数返回值的类型。
@@ -224,7 +225,7 @@ func sumOf(numbers: Int...) -> Int {
 }
 print(sumOf())
 print(sumOf(numbers: 42, 597, 12))
- */
+*/
 
 /*
 // 函数可以嵌套。被嵌套的函数可以访问外侧函数的变量，你可以使用嵌套函数来重构一个太长或者太复杂的函数。
@@ -249,8 +250,9 @@ func makeIncrementer() -> ((Int) -> String) {
     return addOne
 }
 var increment = makeIncrementer()
+// 注意这里参数的传递，makeIncrementer是没有参数的，把它付给一个变量increment，因为它的返回值是一个函数addOne，再通过increment将内部函数的参数传递进去
 print(increment(7))
- */
+*/
 
 /*
 func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
